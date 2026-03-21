@@ -363,15 +363,12 @@ a {
     cursor: pointer;
 }
 
-.logo-bracket {
-    color: var(--accent-primary);
-}
-
-.logo-name {
-    background: var(--gradient-primary);
+.logo-text {
+    background: linear-gradient(135deg, #c7d2fe, #a78bfa);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    letter-spacing: 2px;
 }
 
 .nav-links {
@@ -1659,7 +1656,10 @@ footer .fa-heart {
     .nav-links { display: none; }
     .nav-toggle { display: flex; }
     
-    .section { padding: 100px 20px 60px; }
+    .section { 
+        padding: 80px 16px 50px; 
+        min-height: auto;
+    }
 
     /* Hero responsive */
     .hero-layout {
