@@ -270,8 +270,9 @@ function initScrollAnimations() {
         gsap.from(el, {
             scrollTrigger: {
                 trigger: el,
-                start: 'top 85%',
+                start: 'top 95%',
                 toggleActions: 'play none none none',
+                once: true,
             },
             opacity: 0,
             y: 50,
@@ -284,7 +285,8 @@ function initScrollAnimations() {
     gsap.from('.project-card', {
         scrollTrigger: {
             trigger: '.projects-grid',
-            start: 'top 80%',
+            start: 'top 95%',
+            once: true,
         },
         opacity: 0,
         y: 60,
@@ -297,7 +299,8 @@ function initScrollAnimations() {
     gsap.from('.skill-card', {
         scrollTrigger: {
             trigger: '.skills-grid',
-            start: 'top 80%',
+            start: 'top 95%',
+            once: true,
         },
         opacity: 0,
         y: 40,
@@ -311,7 +314,8 @@ function initScrollAnimations() {
     gsap.from('.contact-card', {
         scrollTrigger: {
             trigger: '.contact-info-cards',
-            start: 'top 85%',
+            start: 'top 95%',
+            once: true,
         },
         opacity: 0,
         x: -30,
@@ -320,6 +324,18 @@ function initScrollAnimations() {
         ease: 'power3.out',
     });
 }
+
+
+// ====== MOBILE VISIBILITY FALLBACK ======
+// Ensure all content is visible on mobile even if ScrollTrigger doesn't fire
+setTimeout(() => {
+    document.querySelectorAll('.section-header, .about-grid, .skills-grid, .projects-grid, .contact-grid, .project-card, .skill-card, .contact-card, .journey-node').forEach(el => {
+        if (getComputedStyle(el).opacity === '0' || parseFloat(getComputedStyle(el).opacity) < 0.1) {
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+        }
+    });
+}, 3000);
 
 
 // ====== NAVIGATION ======
@@ -466,6 +482,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Init scroll animations (after a small delay for DOM)
     setTimeout(() => {
         initScrollAnimations();
+        // Refresh ScrollTrigger after images/fonts load for correct positions on mobile
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 500);
     }, 100);
 
     // Init 3D card tilt effects
