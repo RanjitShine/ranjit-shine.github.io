@@ -1652,6 +1652,10 @@ footer .fa-heart {
     body { cursor: auto; }
     .cursor-dot, .cursor-ring { display: none; }
     
+    .scroll-indicator {
+        display: none;
+    }
+    
     .nav-links { display: none; }
     .nav-toggle { display: flex; }
     
