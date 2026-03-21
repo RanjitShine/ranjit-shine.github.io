@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranjit Shine | AI Engineer & SAP Expert</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Cinematic Photo Background -->
+    <div id="photo-bg">
+        <div class="photo-bg-slide active kenburns-1" style="background-image: url('pics/Image (2).jpg')"></div>
+        <div class="photo-bg-slide kenburns-2" style="background-image: url('pics/Image (3).jpg')"></div>
+        <div class="photo-bg-slide kenburns-3" style="background-image: url('pics/Image (5).jpg')"></div>
+        <div class="photo-bg-overlay"></div>
+        <div class="photo-bg-grain"></div>
+        <div class="photo-bg-vignette"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-ring">
+                <div class="loader-ring-inner"></div>
+            </div>
+            <p class="loader-text">Initializing 3D Portfolio...</p>
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-bracket">/&gt;</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link active" data-section="home">Home</a>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+            <a href="#journey" class="nav-link" data-section="journey">Journey</a>
+            <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+            <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+            <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#journey" class="mobile-link">Journey</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- ===== HERO SECTION ===== -->
+        <section id="home" class="section hero-section">
+            <div class="hero-layout">
+                <div class="hero-content">
+                   
+                    <h1 class="hero-title">
+                        <span class="hero-line">Hi, I'm</span>
+                        <span class="hero-name glitch" data-text="Ranjit Shine">Ranjit Shine</span>
+                    </h1>
+                    <div class="hero-roles">
+                        <span class="role-prefix">I build</span>
+                        <span class="typed-text" id="typed-output"></span>
+                        <span class="typed-cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        An aspiring SAP BTP Consultant and AI Engineer passionate about building 
+                        intelligent enterprise solutions using SAP BTP, SAP CAP, SAP Build Process 
+                        Automation, and SAPUI5.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#journey" class="btn btn-primary">
+                            <span>Explore My Journey</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <span>Get In Touch</span>
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="1">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Projects Delivered</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT SECTION ===== -->
+        <section id="about" class="section about-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">About <span class="highlight">Me</span></h2>
+                    <div class="title-line"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-visual">
+                        <div class="about-card-3d" id="about-card">
+                            <div class="card-inner">
+                                <div class="card-photo-wrapper">
+                                    <div class="card-photo-ring"></div>
+                                    <img src="pics/Image (3).jpg" alt="Ranjit Shine" class="card-photo">
+                                </div>
+                                <div class="card-info">
+                                    <h3>Ranjit Shine</h3>
+                                    <p>AI Engineer & SAP Architect</p>
+                                </div>
+                                <div class="card-tech-icons">
+                                    <span title="Python"><i class="fab fa-python"></i></span>
+                                    <span title="AI/ML"><i class="fas fa-robot"></i></span>
+                                    <span title="Cloud"><i class="fas fa-cloud"></i></span>
+                                    <span title="SAP"><i class="fas fa-database"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p class="about-intro">
+                            I'm a passionate <strong>AI Engineer</strong> and <strong>SAP Technology Expert</strong> 
+                            with deep expertise in building intelligent enterprise solutions. My journey spans across 
+                            cutting-edge AI technologies and SAP's powerful ecosystem.
+                        </p>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <div class="highlight-icon"><i class="fas fa-microchip"></i></div>
+                                <div>
+                                    <h4>AI & Machine Learning</h4>
+                                    <p>Building intelligent models, NLP systems, and AI-powered applications</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon"><i class="fas fa-cubes"></i></div>
+                                <div>
+                                    <h4>SAP BTP & Cloud</h4>
+                                    <p>Architecting scalable solutions on SAP Business Technology Platform</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon"><i class="fas fa-puzzle-piece"></i></div>
+                                <div>
+                                    <h4>Extension Suite</h4>
+                                    <p>Extending SAP applications with custom integrations and workflows</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                                <div>
+                                    <h4>SAP Joule & CAP Model</h4>
+                                    <p>Leveraging AI copilot and Cloud Application Programming model</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== JOURNEY SECTION ===== -->
+        <section id="journey" class="section journey-section">
+            <div class="section-container">
+                <div class="section-header">
+
+                    <h2 class="section-title">My <span class="highlight">Journey</span></h2>
+                    <div class="title-line"></div>
+                    <p class="section-subtitle">The path that shaped my expertise</p>
+                </div>
+
+                <div class="journey-timeline">
+                    <!-- Timeline Line -->
+                    <div class="timeline-line">
+                        <div class="timeline-line-fill" id="timeline-fill"></div>
+                    </div>
+
+                    <!-- Journey Node 1: AI Engineer -->
+                    <div class="journey-node" data-aos="fade-right">
+                        <div class="node-marker">
+                            <div class="node-dot">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="node-pulse"></div>
+                        </div>
+                        <div class="node-card glass-card">
+                            <div class="node-card-header">
+                                <span class="node-year">Foundation</span>
+                                <span class="node-badge">AI/ML</span>
+                            </div>
+                            <h3 class="node-title">AI Engineer</h3>
+                            <p class="node-description">
+                                Started my journey in Artificial Intelligence and Machine Learning. 
+                                Built predictive models, NLP pipelines, and deep learning solutions. 
+                                Mastered Python, TensorFlow, PyTorch, and cloud-based AI services.
+                            </p>
+                            <div class="node-tech-tags">
+                                <span>Python</span>
+                                <span>TensorFlow</span>
+                                <span>PyTorch</span>
+                                <span>NLP</span>
+                                <span>Deep Learning</span>
+                                <span>Computer Vision</span>
+                            </div>
+                            <div class="node-3d-element" data-shape="brain"></div>
+                        </div>
+                    </div>
+
+                    <!-- Journey Node 2: SAP BTP -->
+                    <div class="journey-node node-right" data-aos="fade-left">
+                        <div class="node-marker">
+                            <div class="node-dot">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="node-pulse"></div>
+                        </div>
+                        <div class="node-card glass-card">
+                            <div class="node-card-header">
+                                <span class="node-year">Evolution</span>
+                                <span class="node-badge sap">SAP</span>
+                            </div>
+                            <h3 class="node-title">SAP BTP</h3>
+                            <p class="node-description">
+                                Expanded into SAP Business Technology Platform. Designed and implemented 
+                                enterprise-grade solutions using SAP BTP services, including integration 
+                                suites, data intelligence, and application development.
+                            </p>
+                            <div class="node-tech-tags">
+                                <span>SAP BTP Cockpit</span>
+                                <span>Integration Suite</span>
+                                <span>HANA Cloud</span>
+                                <span>Fiori</span>
+                                <span>Workflow Management</span>
+                            </div>
+                            <div class="node-3d-element" data-shape="cloud"></div>
+                        </div>
+                    </div>
+
+                    <!-- Journey Node 3: Extension Suite -->
+                    <div class="journey-node" data-aos="fade-right">
+                        <div class="node-marker">
+                            <div class="node-dot">
+                                <i class="fas fa-puzzle-piece"></i>
+                            </div>
+                            <div class="node-pulse"></div>
+                        </div>
+                        <div class="node-card glass-card">
+                            <div class="node-card-header">
+                                <span class="node-year">Expansion</span>
+                                <span class="node-badge ext">Extensions</span>
+                            </div>
+                            <h3 class="node-title">Extension Suite</h3>
+                            <p class="node-description">
+                                Specialized in SAP Extension Suite to build side-by-side extensions, 
+                                custom applications, and process automations. Extended SAP S/4HANA 
+                                and other SAP systems with modern cloud-native apps.
+                            </p>
+                            <div class="node-tech-tags">
+                                <span>Side-by-Side Extensions</span>
+                                <span>SAP AppGyver</span>
+                                <span>SAP Build</span>
+                                <span>Process Automation</span>
+                                <span>Event Mesh</span>
+                            </div>
+                            <div class="node-3d-element" data-shape="puzzle"></div>
+                        </div>
+                    </div>
+
+                    <!-- Journey Node 4: SAP Joule -->
+                    <div class="journey-node node-right" data-aos="fade-left">
+                        <div class="node-marker">
+                            <div class="node-dot">
+                                <i class="fas fa-wand-magic-sparkles"></i>
+                            </div>
+                            <div class="node-pulse"></div>
+                        </div>
+                        <div class="node-card glass-card">
+                            <div class="node-card-header">
+                                <span class="node-year">Innovation</span>
+                                <span class="node-badge joule">AI Copilot</span>
+                            </div>
+                            <h3 class="node-title">SAP Joule</h3>
+                            <p class="node-description">
+                                Embraced SAP's AI copilot — Joule. Integrated generative AI capabilities 
+                                into SAP workflows, enabling natural language interactions, intelligent 
+                                automation, and AI-driven insights across the enterprise.
+                            </p>
+                            <div class="node-tech-tags">
+                                <span>Generative AI</span>
+                                <span>AI Copilot</span>
+                                <span>Natural Language</span>
+                                <span>Intelligent Automation</span>
+                                <span>SAP AI Core</span>
+                            </div>
+                            <div class="node-3d-element" data-shape="sparkle"></div>
+                        </div>
+                    </div>
+
+                    <!-- Journey Node 5: CAPM -->
+                    <div class="journey-node" data-aos="fade-right">
+                        <div class="node-marker">
+                            <div class="node-dot">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <div class="node-pulse"></div>
+                        </div>
+                        <div class="node-card glass-card">
+                            <div class="node-card-header">
+                                <span class="node-year">Mastery</span>
+                                <span class="node-badge cap">CAP</span>
+                            </div>
+                            <h3 class="node-title">CAP Model (CAPM)</h3>
+                            <p class="node-description">
+                                Mastered the SAP Cloud Application Programming Model. Building 
+                                full-stack cloud applications with CDS modeling, service definitions, 
+                                and enterprise-grade backends. Creating scalable, maintainable 
+                                applications following best practices.
+                            </p>
+                            <div class="node-tech-tags">
+                                <span>CDS</span>
+                                <span>Node.js</span>
+                                <span>Java</span>
+                                <span>OData</span>
+                                <span>Fiori Elements</span>
+                                <span>SAP HANA</span>
+                            </div>
+                            <div class="node-3d-element" data-shape="layers"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== SKILLS SECTION ===== -->
+        <section id="skills" class="section skills-section">
+            <div class="section-container">
+                <div class="section-header">
+
+                    <h2 class="section-title">Tech <span class="highlight">Arsenal</span></h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- AI & ML -->
+                    <div class="skill-card glass-card" data-tilt>
+                        <div class="skill-card-glow"></div>
+                        <div class="skill-icon ai-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI & Machine Learning</h3>
+                        <div class="skill-bars">
+                            <div class="skill-bar-item">
+                                <span>Python</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span>TensorFlow / PyTorch</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span>NLP & LLMs</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span>Computer Vision</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SAP BTP -->
+                    <div class="skill-card glass-card" data-tilt>
+                        <div class="skill-card-glow"></div>
+                        <div class="skill-icon sap-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>SAP BTP</h3>
+                        <div class="skill-bars">
+                            <div class="skill-bar-item">
+                                <span>BTP Services</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span>Integration Suite</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="87"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span>HANA Cloud</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span>Fiori / UI5</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Extension Suite -->
+                    <div class="skill-card glass-card" data-tilt>
+                        <div class="skill-card-glow"></div>
+                        <div class="skill-icon ext-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h3>Extension Suite</h3>
+                        <div class="skill-bars">
+                            <div class="skill-bar-item">
+                                <span>Side-by-Side Ext.</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span>SAP Build</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span>Process Automation</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="83"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span>Event Mesh</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SAP Joule -->
+                    <div class="skill-card glass-card" data-tilt>
+                        <div class="skill-card-glow"></div>
+                        <div class="skill-icon joule-icon">
+                            <i class="fas fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3>SAP Joule</h3>
+                        <div class="skill-bars">
+                            <div class="skill-bar-item">
+                                <span>AI Copilot Integration</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span>Generative AI</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span>SAP AI Core</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span>Prompt Engineering</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CAPM -->
+                    <div class="skill-card glass-card" data-tilt>
+                        <div class="skill-card-glow"></div>
+                        <div class="skill-icon cap-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>CAP Model</h3>
+                        <div class="skill-bars">
+                            <div class="skill-bar-item">
+                                <span>CDS Modeling</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span>Node.js / Java</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="87"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span>OData Services</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span>Fiori Elements</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud & DevOps -->
+                    <div class="skill-card glass-card" data-tilt>
+                        <div class="skill-card-glow"></div>
+                        <div class="skill-icon devops-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Cloud & DevOps</h3>
+                        <div class="skill-bars">
+                            <div class="skill-bar-item">
+                                <span>Cloud Foundry</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span>Docker / K8s</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span>CI/CD Pipelines</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <span>Git & Version Control</span>
+                                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS SECTION ===== -->
+        <section id="projects" class="section projects-section">
+            <div class="section-container">
+                <div class="section-header">
+
+                    <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card glass-card">
+                        <div class="project-preview">
+                            <div class="project-icon-large"><i class="fas fa-robot"></i></div>
+                            <div class="project-overlay">
+                                <span>View Project</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="tag-ai">AI/ML</span>
+                                <span class="tag-sap">SAP</span>
+                            </div>
+                            <h3>AI-Powered SAP Analytics</h3>
+                            <p>Built an intelligent analytics dashboard integrating ML models with SAP BTP for predictive business insights.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>SAP BTP</span>
+                                <span>HANA</span>
+                                <span>TensorFlow</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card">
+                        <div class="project-preview">
+                            <div class="project-icon-large"><i class="fas fa-comments"></i></div>
+                            <div class="project-overlay">
+                                <span>View Project</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="tag-joule">Joule</span>
+                                <span class="tag-ai">AI</span>
+                            </div>
+                            <h3>SAP Joule Custom Assistant</h3>
+                            <p>Developed a custom AI assistant using SAP Joule for enterprise workflow automation and natural language querying.</p>
+                            <div class="project-tech">
+                                <span>SAP Joule</span>
+                                <span>AI Core</span>
+                                <span>GenAI</span>
+                                <span>Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card">
+                        <div class="project-preview">
+                            <div class="project-icon-large"><i class="fas fa-sitemap"></i></div>
+                            <div class="project-overlay">
+                                <span>View Project</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="tag-cap">CAP</span>
+                                <span class="tag-ext">Extension</span>
+                            </div>
+                            <h3>Full-Stack CAP Application</h3>
+                            <p>End-to-end enterprise application built with CAP model, Fiori Elements UI, and HANA Cloud database.</p>
+                            <div class="project-tech">
+                                <span>CAPM</span>
+                                <span>CDS</span>
+                                <span>Fiori</span>
+                                <span>HANA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card">
+                        <div class="project-preview">
+                            <div class="project-icon-large"><i class="fas fa-gears"></i></div>
+                            <div class="project-overlay">
+                                <span>View Project</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="tag-ext">Extension</span>
+                                <span class="tag-sap">BTP</span>
+                            </div>
+                            <h3>S/4HANA Extension Suite</h3>
+                            <p>Built side-by-side extensions for SAP S/4HANA with process automation and event-driven architecture.</p>
+                            <div class="project-tech">
+                                <span>Extension Suite</span>
+                                <span>Event Mesh</span>
+                                <span>S/4HANA</span>
+                                <span>BTP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== CONTACT SECTION ===== -->
+        <section id="contact" class="section contact-section">
+            <div class="section-container">
+                <div class="section-header">
+
+                    <h2 class="section-title">Let's <span class="highlight">Connect</span></h2>
+                    <div class="title-line"></div>
+                    <p class="section-subtitle">Have a project in mind? Let's build something amazing together.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info-cards">
+                        <div class="contact-card glass-card">
+                            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                            <h4>Email</h4>
+                            <p>ranjitshine@email.com</p>
+                        </div>
+                        <div class="contact-card glass-card">
+                            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <h4>Location</h4>
+                            <p>India</p>
+                        </div>
+                        <div class="contact-card glass-card">
+                            <div class="contact-card-icon"><i class="fas fa-briefcase"></i></div>
+                            <h4>Status</h4>
+                            <p>Open to Opportunities</p>
+                        </div>
+                    </div>
+
+                    <form class="contact-form glass-card" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder=" " required>
+                            <label for="name">Your Name</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder=" " required>
+                            <label for="email">Your Email</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder=" " required>
+                            <label for="subject">Subject</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" placeholder=" " required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ranjit-shine-465373227/" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/+917510524153" target="_blank" class="social-link" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://github.com/RanjitShine" target="_blank" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/ranjit_shine/" target="_blank" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Ranjit Shine.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
