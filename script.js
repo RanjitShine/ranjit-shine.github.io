@@ -29,26 +29,21 @@ class CinematicBackground {
         // Start auto-cycling
         this.startAutoPlay();
 
-        // Parallax on mouse move — subtle background shift
+        // Throttled parallax on mouse move — prevents excessive repaints
+        let ticking = false;
         document.addEventListener('mousemove', (e) => {
-            const x = (e.clientX / window.innerWidth - 0.5) * 2;
-            const y = (e.clientY / window.innerHeight - 0.5) * 2;
-
-            this.slides.forEach(slide => {
-                if (slide.classList.contains('active')) {
-                    slide.style.backgroundPosition = `calc(50% + ${x * 8}px) calc(25% + ${y * 8}px)`;
-                }
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+                const x = (e.clientX / window.innerWidth - 0.5) * 2;
+                const y = (e.clientY / window.innerHeight - 0.5) * 2;
+                this.slides.forEach(slide => {
+                    if (slide.classList.contains('active')) {
+                        slide.style.backgroundPosition = `calc(50% + ${x * 8}px) calc(25% + ${y * 8}px)`;
+                    }
+                });
+                ticking = false;
             });
-        });
-
-        // Change slide faster when scrolling through sections
-        let lastScrollY = window.scrollY;
-        window.addEventListener('scroll', () => {
-            const delta = Math.abs(window.scrollY - lastScrollY);
-            if (delta > 300) {
-                this.nextSlide();
-                lastScrollY = window.scrollY;
-            }
         });
     }
 
